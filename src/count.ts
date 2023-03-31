@@ -52,6 +52,8 @@ export const countCodeLines = (
     },
     ThrowStatement: addLogicalLine,
 
+    // expression statements
+    ExpressionStatement: addLogicalLine,
   });
 
   //   walk.simple(ast, {

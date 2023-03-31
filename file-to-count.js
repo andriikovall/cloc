@@ -1,23 +1,14 @@
 if (a === 1) { //
-  console.log('hello');
 } else if (b === 2) { // 
-  console.log('world');
-  const a = d === 3 ? 'foo' : 'bar'; //
   try { //
-    const a = d === 3 ? 'foo' : 'bar'; //
   } catch(e) {} //
   if (a === 1) { //
-    console.log('hello');
   } else if (b === 2) { // 
-    console.log('world');
-    const a = d === 3 ? 'foo' : 'bar'; //
     try { //
-      const a = d === 3 ? 'foo' : 'bar'; //
     } catch(e) {} //
   }
 }
 
-const a = d === 3 ? 'foo' : 'bar'; //
 try { //
 
 } catch(e) {} //
@@ -25,20 +16,20 @@ try { //
 switch (3) { //
   case 2: //
   case 3: //
-  console.log(213);
+  break; //
 }
-// 18
+// 19
 
 for (let i = 0; i < 10; i++) { //
-  console.log(i)
+  console.log(i) //
 };
 
 for (const a in b) { //
-  console.log(a);
+  console.log(a); //
 }
 
 for (const a of b) { //
-  console.log(a);
+  console.log(a); //
 }
 
 do {
@@ -48,7 +39,7 @@ do {
 while (false) { //
 
 }
-// 23
+// 24
 
 function foo() {
   return 1; //
@@ -62,4 +53,10 @@ while (true) { //
 
 throw new Error('foo'); //
 
-// 28
+// 27
+
+console.log('foo'); //
+let a = 1; 
+a = 13; //
+
+// 29
