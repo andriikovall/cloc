@@ -18,11 +18,11 @@ switch (3) { //
   case 3: //
   break; //
 }
-// 19
+// 14
 
 for (let i = 0; i < 10; i++) { //
   console.log(i) //
-};
+}
 
 for (const a in b) { //
   console.log(a); //
@@ -39,7 +39,7 @@ do {
 while (false) { //
 
 }
-// 24
+// 22
 
 function foo() {
   return 1; //
@@ -60,3 +60,7 @@ let a = 1;
 a = 13; //
 
 // 29
+
+debugger; //
+
+// 30
