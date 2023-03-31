@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 761,
+  "end": 904,
   "body": [
     {
       "type": "IfStatement",
@@ -1022,6 +1022,112 @@
         "start": 753,
         "end": 760,
         "body": []
+      }
+    },
+    {
+      "type": "FunctionDeclaration",
+      "start": 768,
+      "end": 801,
+      "id": {
+        "type": "Identifier",
+        "start": 777,
+        "end": 780,
+        "name": "foo"
+      },
+      "expression": false,
+      "generator": false,
+      "async": false,
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "start": 783,
+        "end": 801,
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "start": 787,
+            "end": 796,
+            "argument": {
+              "type": "Literal",
+              "start": 794,
+              "end": 795,
+              "value": 1,
+              "raw": "1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "LabeledStatement",
+      "start": 803,
+      "end": 875,
+      "body": {
+        "type": "WhileStatement",
+        "start": 817,
+        "end": 875,
+        "test": {
+          "type": "Literal",
+          "start": 824,
+          "end": 828,
+          "value": true,
+          "raw": "true"
+        },
+        "body": {
+          "type": "BlockStatement",
+          "start": 830,
+          "end": 875,
+          "body": [
+            {
+              "type": "BreakStatement",
+              "start": 837,
+              "end": 843,
+              "label": null
+            },
+            {
+              "type": "ContinueStatement",
+              "start": 849,
+              "end": 870,
+              "label": {
+                "type": "Identifier",
+                "start": 858,
+                "end": 869,
+                "name": "exampleLoop"
+              }
+            }
+          ]
+        }
+      },
+      "label": {
+        "type": "Identifier",
+        "start": 803,
+        "end": 814,
+        "name": "exampleLoop"
+      }
+    },
+    {
+      "type": "ThrowStatement",
+      "start": 877,
+      "end": 900,
+      "argument": {
+        "type": "NewExpression",
+        "start": 883,
+        "end": 899,
+        "callee": {
+          "type": "Identifier",
+          "start": 887,
+          "end": 892,
+          "name": "Error"
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 893,
+            "end": 898,
+            "value": "foo",
+            "raw": "'foo'"
+          }
+        ]
       }
     }
   ],

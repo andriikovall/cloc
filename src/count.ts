@@ -42,6 +42,16 @@ export const countCodeLines = (
     ForOfStatement: addLogicalLine,
     WhileStatement: addLogicalLine,
     DoWhileStatement: addLogicalLine,
+    
+    // jump statements
+    ReturnStatement: addLogicalLine,
+    BreakStatement: addLogicalLine,
+    ContinueStatement: addLogicalLine,
+    LabeledStatement() {
+      // do nothing
+    },
+    ThrowStatement: addLogicalLine,
+
   });
 
   //   walk.simple(ast, {

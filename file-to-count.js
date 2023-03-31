@@ -48,3 +48,18 @@ do {
 while (false) { //
 
 }
+// 23
+
+function foo() {
+  return 1; //
+}
+
+exampleLoop: 
+while (true) { //
+  break; //
+  continue exampleLoop; //
+}
+
+throw new Error('foo'); //
+
+// 28
