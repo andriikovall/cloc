@@ -1,0 +1,2 @@
+- remove forEach where possible
+- isCountryCompleted pass only country. Handle numbers of coins to 0 in coin and just increase them
