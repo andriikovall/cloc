@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 679,
+  "end": 699,
   "body": [
     {
       "type": "IfStatement",
@@ -748,6 +748,23 @@
       "type": "DebuggerStatement",
       "start": 660,
       "end": 669
+    },
+    {
+      "type": "BlockStatement",
+      "start": 681,
+      "end": 685,
+      "body": []
+    },
+    {
+      "type": "BlockStatement",
+      "start": 687,
+      "end": 691,
+      "body": []
+    },
+    {
+      "type": "EmptyStatement",
+      "start": 691,
+      "end": 692
     }
   ],
   "sourceType": "script"

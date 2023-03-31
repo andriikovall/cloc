@@ -1,3 +1,4 @@
+import { isSelectionStatement, isIterationStatement, isFunction, isNextChar } from './utils';
 import acorn from 'acorn';
 import * as walk from 'acorn-walk';
 import { countSimpleLines } from './countSimpleLines';
@@ -59,25 +60,21 @@ export const countCodeLines = (
     // statements in general, other statements are already counted
     DebuggerStatement: addLogicalLine,
 
-  });
+    // block statements
+    BlockStatement(node, _state, ancestors) {
+      const parent = ancestors[ancestors.length - 2];
+      const usedWithSelectionStatement = isSelectionStatement(parent);
+      const usedWithIterationStatement = isIterationStatement(parent);
+      const usedWithFunction = isFunction(parent);
+      const isFollowedWithSemicolon = isNextChar(code, node.end, ';');
+      
+      if (usedWithSelectionStatement || usedWithIterationStatement || usedWithFunction || isFollowedWithSemicolon) {
+        return;
+      }
+      addLogicalLine();
+    },
 
-  //   walk.simple(ast, {
-  //     Program: countNode,
-  //     BlockStatement: countNode,
-  //     FunctionDeclaration: countNode,
-  //     IfStatement: countNode,
-  //     SwitchStatement: countNode,
-  //     TryStatement: countNode,
-  //     ForStatement: countNode,
-  //     WhileStatement: countNode,
-  //     DoWhileStatement: countNode,
-  //     ReturnStatement: countNode,
-  //     BreakStatement: countNode,
-  //     ContinueStatement: countNode,
-  //     ThrowStatement: countNode,
-  //     ExpressionStatement: countNode,
-  //     EmptyStatement: countNode,
-  //   });
+  });
 
   const { total, empty, physical } = countSimpleLines(code);
   return {
