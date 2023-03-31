@@ -27,3 +27,24 @@ switch (3) { //
   case 3: //
   console.log(213);
 }
+// 18
+
+for (let i = 0; i < 10; i++) { //
+  console.log(i)
+};
+
+for (const a in b) { //
+  console.log(a);
+}
+
+for (const a of b) { //
+  console.log(a);
+}
+
+do {
+
+} while(false); //
+
+while (false) { //
+
+}

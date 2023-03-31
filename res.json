@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 561,
+  "end": 761,
   "body": [
     {
       "type": "IfStatement",
@@ -728,6 +728,301 @@
           }
         }
       ]
+    },
+    {
+      "type": "ForStatement",
+      "start": 568,
+      "end": 620,
+      "init": {
+        "type": "VariableDeclaration",
+        "start": 573,
+        "end": 582,
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 577,
+            "end": 582,
+            "id": {
+              "type": "Identifier",
+              "start": 577,
+              "end": 578,
+              "name": "i"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 581,
+              "end": 582,
+              "value": 0,
+              "raw": "0"
+            }
+          }
+        ],
+        "kind": "let"
+      },
+      "test": {
+        "type": "BinaryExpression",
+        "start": 584,
+        "end": 590,
+        "left": {
+          "type": "Identifier",
+          "start": 584,
+          "end": 585,
+          "name": "i"
+        },
+        "operator": "<",
+        "right": {
+          "type": "Literal",
+          "start": 588,
+          "end": 590,
+          "value": 10,
+          "raw": "10"
+        }
+      },
+      "update": {
+        "type": "UpdateExpression",
+        "start": 592,
+        "end": 595,
+        "operator": "++",
+        "prefix": false,
+        "argument": {
+          "type": "Identifier",
+          "start": 592,
+          "end": 593,
+          "name": "i"
+        }
+      },
+      "body": {
+        "type": "BlockStatement",
+        "start": 597,
+        "end": 620,
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "start": 604,
+            "end": 618,
+            "expression": {
+              "type": "CallExpression",
+              "start": 604,
+              "end": 618,
+              "callee": {
+                "type": "MemberExpression",
+                "start": 604,
+                "end": 615,
+                "object": {
+                  "type": "Identifier",
+                  "start": 604,
+                  "end": 611,
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 612,
+                  "end": 615,
+                  "name": "log"
+                },
+                "computed": false
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "start": 616,
+                  "end": 617,
+                  "name": "i"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "EmptyStatement",
+      "start": 620,
+      "end": 621
+    },
+    {
+      "type": "ForInStatement",
+      "start": 623,
+      "end": 666,
+      "left": {
+        "type": "VariableDeclaration",
+        "start": 628,
+        "end": 635,
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 634,
+            "end": 635,
+            "id": {
+              "type": "Identifier",
+              "start": 634,
+              "end": 635,
+              "name": "a"
+            },
+            "init": null
+          }
+        ],
+        "kind": "const"
+      },
+      "right": {
+        "type": "Identifier",
+        "start": 639,
+        "end": 640,
+        "name": "b"
+      },
+      "body": {
+        "type": "BlockStatement",
+        "start": 642,
+        "end": 666,
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "start": 649,
+            "end": 664,
+            "expression": {
+              "type": "CallExpression",
+              "start": 649,
+              "end": 663,
+              "callee": {
+                "type": "MemberExpression",
+                "start": 649,
+                "end": 660,
+                "object": {
+                  "type": "Identifier",
+                  "start": 649,
+                  "end": 656,
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 657,
+                  "end": 660,
+                  "name": "log"
+                },
+                "computed": false
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "start": 661,
+                  "end": 662,
+                  "name": "a"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ForOfStatement",
+      "start": 668,
+      "end": 711,
+      "left": {
+        "type": "VariableDeclaration",
+        "start": 673,
+        "end": 680,
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 679,
+            "end": 680,
+            "id": {
+              "type": "Identifier",
+              "start": 679,
+              "end": 680,
+              "name": "a"
+            },
+            "init": null
+          }
+        ],
+        "kind": "const"
+      },
+      "right": {
+        "type": "Identifier",
+        "start": 684,
+        "end": 685,
+        "name": "b"
+      },
+      "body": {
+        "type": "BlockStatement",
+        "start": 687,
+        "end": 711,
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "start": 694,
+            "end": 709,
+            "expression": {
+              "type": "CallExpression",
+              "start": 694,
+              "end": 708,
+              "callee": {
+                "type": "MemberExpression",
+                "start": 694,
+                "end": 705,
+                "object": {
+                  "type": "Identifier",
+                  "start": 694,
+                  "end": 701,
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 702,
+                  "end": 705,
+                  "name": "log"
+                },
+                "computed": false
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "start": 706,
+                  "end": 707,
+                  "name": "a"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "DoWhileStatement",
+      "start": 713,
+      "end": 734,
+      "body": {
+        "type": "BlockStatement",
+        "start": 716,
+        "end": 720,
+        "body": []
+      },
+      "test": {
+        "type": "Literal",
+        "start": 727,
+        "end": 732,
+        "value": false,
+        "raw": "false"
+      }
+    },
+    {
+      "type": "WhileStatement",
+      "start": 739,
+      "end": 760,
+      "test": {
+        "type": "Literal",
+        "start": 746,
+        "end": 751,
+        "value": false,
+        "raw": "false"
+      },
+      "body": {
+        "type": "BlockStatement",
+        "start": 753,
+        "end": 760,
+        "body": []
+      }
     }
   ],
   "sourceType": "script"

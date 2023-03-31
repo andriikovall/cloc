@@ -25,6 +25,7 @@ export const countCodeLines = (
 
   // todo: comment lines as well
   walk.ancestor(ast, {
+    // selection statements
     IfStatement: addLogicalLine,
     SwitchStatement(node) {
       addLogicalLine();
@@ -33,6 +34,14 @@ export const countCodeLines = (
     ConditionalExpression: addLogicalLine,
     TryStatement: addLogicalLine,
     CatchClause: addLogicalLine,
+
+    // iteration statements
+    // todo: not count expressions inside
+    ForStatement: addLogicalLine,
+    ForInStatement: addLogicalLine,
+    ForOfStatement: addLogicalLine,
+    WhileStatement: addLogicalLine,
+    DoWhileStatement: addLogicalLine,
   });
 
   //   walk.simple(ast, {
