@@ -9,7 +9,7 @@ import fs from 'fs/promises';
 (async () => {
   const filePath = process.argv[2];
   const file = await fs.readFile(filePath, 'utf-8');
-  const res = countCodeLines(file);
+  const {node, ...res} = countCodeLines(file);
   console.table(res);
-  fs.writeFile('./res.json', JSON.stringify(res.node, null, 2));
+  fs.writeFile('./res.json', JSON.stringify(node, null, 2));
 })();
