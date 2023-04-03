@@ -1,6 +1,4 @@
 import { countCodeLines } from './count';
-import { Parser } from 'acorn';
-import * as walk from 'acorn-walk';
 import fs from 'fs/promises';
 
 /**
@@ -9,8 +7,9 @@ import fs from 'fs/promises';
  */
 
 (async () => {
-  const file = await fs.readFile('./file-to-count.js', 'utf-8');
+  const filePath = process.argv[2];
+  const file = await fs.readFile(filePath, 'utf-8');
   const res = countCodeLines(file);
-  console.log('res:', res);
+  console.table(res);
   fs.writeFile('./res.json', JSON.stringify(res.node, null, 2));
 })();

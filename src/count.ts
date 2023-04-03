@@ -16,16 +16,19 @@ export const countCodeLines = (
   };
   node: acorn.Node;
 } => {
+  let commentCharsCount = 0;
   const ast = acorn.parse(code, {
     ecmaVersion: 2017,
     sourceType: 'module',
+    onComment(_isBlock, _text, start, end) {
+      commentCharsCount += end - start;
+    },
   });
   let logicalLinesCount = 0;
 
   const addLogicalLines = (n: number = 1) => (logicalLinesCount += n);
   const addLogicalLine = () => addLogicalLines(1);
 
-  // todo: comment lines as well
   walk.ancestor(ast, {
     // selection statements
     IfStatement: addLogicalLine,
@@ -38,7 +41,6 @@ export const countCodeLines = (
     CatchClause: addLogicalLine,
 
     // iteration statements
-    // todo: not count expressions inside
     ForStatement: addLogicalLine,
     ForInStatement: addLogicalLine,
     ForOfStatement: addLogicalLine,
@@ -93,15 +95,18 @@ export const countCodeLines = (
   });
 
   const { total, empty, physical } = countSimpleLines(code);
+  const levelOfComments = commentCharsCount / ast.end;
+  
+  // an approximation of number of comment lines
+  const numberOfCommentsLines = Math.round(levelOfComments * total);
   return {
     total,
     empty,
     physical,
     logical: logicalLinesCount,
-    // todo: this
     comments: {
-      number: 0,
-      level: 0,
+      number: numberOfCommentsLines,
+      level: levelOfComments,
     },
     node: ast,
   };
