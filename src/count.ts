@@ -1,4 +1,4 @@
-import { isSelectionStatement, isIterationStatement, isFunction, isNextChar } from './utils';
+import { isSelectionStatement, isIterationStatement, isFunction, isNextChar, isForInStatement, isForOfStatement, isForStatement, isExportNamedDeclaration } from './utils';
 import acorn from 'acorn';
 import * as walk from 'acorn-walk';
 import { countSimpleLines } from './countSimpleLines';
@@ -18,6 +18,7 @@ export const countCodeLines = (
 } => {
   const ast = acorn.parse(code, {
     ecmaVersion: 2017,
+    sourceType: 'module',
   });
   let logicalLinesCount = 0;
 
@@ -74,6 +75,21 @@ export const countCodeLines = (
       addLogicalLine();
     },
 
+    // data declarations
+    VariableDeclaration(node, _, ancestors) {
+      const parent = ancestors[ancestors.length - 2];
+      if (isForInStatement(parent) || isForOfStatement(parent) || isForStatement(parent) || isExportNamedDeclaration(parent)) {
+        return;
+      }
+      addLogicalLine();
+    },
+    FunctionDeclaration: addLogicalLine,
+    // yeah, this should not be count but I think it's ok
+    ClassDeclaration: addLogicalLine,
+    ExportAllDeclaration: addLogicalLine,
+    ExportDefaultDeclaration: addLogicalLine,
+    ExportNamedDeclaration: addLogicalLine,
+    ImportDeclaration: addLogicalLine,
   });
 
   const { total, empty, physical } = countSimpleLines(code);

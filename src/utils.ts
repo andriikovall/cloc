@@ -5,32 +5,53 @@ export const trim = (n: number, from: number, to: number) => {
 };
 
 export const isSelectionStatement = (node: acorn.Node) => {
-  return node.type === 'IfStatement' ||
+  return (
+    node.type === 'IfStatement' ||
     node.type === 'SwitchStatement' ||
     node.type === 'ConditionalExpression' ||
     node.type === 'TryStatement' ||
-    node.type === 'CatchClause';
-}
+    node.type === 'CatchClause'
+  );
+};
 
 export const isIterationStatement = (node: acorn.Node) => {
-  return node.type === 'ForStatement' ||
+  return (
+    node.type === 'ForStatement' ||
     node.type === 'ForInStatement' ||
     node.type === 'ForOfStatement' ||
     node.type === 'WhileStatement' ||
-    node.type === 'DoWhileStatement';
-}
+    node.type === 'DoWhileStatement'
+  );
+};
 
 export const isFunction = (node: acorn.Node) => {
-  return node.type === 'FunctionDeclaration' ||
-    node.type === 'FunctionExpression';
-}
+  return (
+    node.type === 'FunctionDeclaration' || node.type === 'FunctionExpression'
+  );
+};
+
+export const isForStatement = (node: acorn.Node) => {
+  return node.type === 'ForStatement';
+};
+
+export const isForInStatement = (node: acorn.Node) => {
+  return node.type === 'ForInStatement';
+};
+
+export const isForOfStatement = (node: acorn.Node) => {
+  return node.type === 'ForOfStatement';
+};
+
+export const isExportNamedDeclaration = (node: acorn.Node) => {
+  return node.type === 'ExportNamedDeclaration';
+};
 
 export const isNextChar = (code: string, index: number, char: string) => {
   for (let i = index; i < code.length; i++) {
     const currChar = code[i];
     if (currChar === char) {
       return true;
-    } 
+    }
     const isWhitespace = /\s/.test(currChar);
     if (!isWhitespace) {
       return false;
@@ -38,4 +59,4 @@ export const isNextChar = (code: string, index: number, char: string) => {
   }
 
   return false;
-}
+};

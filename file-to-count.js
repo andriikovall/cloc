@@ -41,7 +41,7 @@ while (false) { //
 }
 // 22
 
-function foo() {
+function foo() { //
   return 1; //
 }
 
@@ -53,20 +53,36 @@ while (true) { //
 
 throw new Error('foo'); //
 
-// 27
+// 28
 
 console.log('foo'); //
-let a = 1; 
+let a = 1; //
 a = 13; //
 
-// 29
+// 31
 
 debugger; //
 
-// 30
+// 32
 
 {
 
 }
 
-// 31
+// 33
+
+const b = 234; //
+function buzz() { //
+}
+
+class FooClass { //
+}
+
+export * from '../module'; //
+export default 13; //
+
+export const bar = 13231; //
+
+import abc from 'sd'; //
+
+// 40

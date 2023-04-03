@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 699,
+  "end": 878,
   "body": [
     {
       "type": "IfStatement",
@@ -554,7 +554,7 @@
     {
       "type": "FunctionDeclaration",
       "start": 462,
-      "end": 495,
+      "end": 498,
       "id": {
         "type": "Identifier",
         "start": 471,
@@ -568,16 +568,16 @@
       "body": {
         "type": "BlockStatement",
         "start": 477,
-        "end": 495,
+        "end": 498,
         "body": [
           {
             "type": "ReturnStatement",
-            "start": 481,
-            "end": 490,
+            "start": 484,
+            "end": 493,
             "argument": {
               "type": "Literal",
-              "start": 488,
-              "end": 489,
+              "start": 491,
+              "end": 492,
               "value": 1,
               "raw": "1"
             }
@@ -587,38 +587,38 @@
     },
     {
       "type": "LabeledStatement",
-      "start": 497,
-      "end": 569,
+      "start": 500,
+      "end": 572,
       "body": {
         "type": "WhileStatement",
-        "start": 511,
-        "end": 569,
+        "start": 514,
+        "end": 572,
         "test": {
           "type": "Literal",
-          "start": 518,
-          "end": 522,
+          "start": 521,
+          "end": 525,
           "value": true,
           "raw": "true"
         },
         "body": {
           "type": "BlockStatement",
-          "start": 524,
-          "end": 569,
+          "start": 527,
+          "end": 572,
           "body": [
             {
               "type": "BreakStatement",
-              "start": 531,
-              "end": 537,
+              "start": 534,
+              "end": 540,
               "label": null
             },
             {
               "type": "ContinueStatement",
-              "start": 543,
-              "end": 564,
+              "start": 546,
+              "end": 567,
               "label": {
                 "type": "Identifier",
-                "start": 552,
-                "end": 563,
+                "start": 555,
+                "end": 566,
                 "name": "exampleLoop"
               }
             }
@@ -627,30 +627,30 @@
       },
       "label": {
         "type": "Identifier",
-        "start": 497,
-        "end": 508,
+        "start": 500,
+        "end": 511,
         "name": "exampleLoop"
       }
     },
     {
       "type": "ThrowStatement",
-      "start": 571,
-      "end": 594,
+      "start": 574,
+      "end": 597,
       "argument": {
         "type": "NewExpression",
-        "start": 577,
-        "end": 593,
+        "start": 580,
+        "end": 596,
         "callee": {
           "type": "Identifier",
-          "start": 581,
-          "end": 586,
+          "start": 584,
+          "end": 589,
           "name": "Error"
         },
         "arguments": [
           {
             "type": "Literal",
-            "start": 587,
-            "end": 592,
+            "start": 590,
+            "end": 595,
             "value": "foo",
             "raw": "'foo'"
           }
@@ -659,26 +659,26 @@
     },
     {
       "type": "ExpressionStatement",
-      "start": 606,
-      "end": 625,
+      "start": 609,
+      "end": 628,
       "expression": {
         "type": "CallExpression",
-        "start": 606,
-        "end": 624,
+        "start": 609,
+        "end": 627,
         "callee": {
           "type": "MemberExpression",
-          "start": 606,
-          "end": 617,
+          "start": 609,
+          "end": 620,
           "object": {
             "type": "Identifier",
-            "start": 606,
-            "end": 613,
+            "start": 609,
+            "end": 616,
             "name": "console"
           },
           "property": {
             "type": "Identifier",
-            "start": 614,
-            "end": 617,
+            "start": 617,
+            "end": 620,
             "name": "log"
           },
           "computed": false
@@ -686,8 +686,8 @@
         "arguments": [
           {
             "type": "Literal",
-            "start": 618,
-            "end": 623,
+            "start": 621,
+            "end": 626,
             "value": "foo",
             "raw": "'foo'"
           }
@@ -696,23 +696,23 @@
     },
     {
       "type": "VariableDeclaration",
-      "start": 629,
-      "end": 639,
+      "start": 632,
+      "end": 642,
       "declarations": [
         {
           "type": "VariableDeclarator",
-          "start": 633,
-          "end": 638,
+          "start": 636,
+          "end": 641,
           "id": {
             "type": "Identifier",
-            "start": 633,
-            "end": 634,
+            "start": 636,
+            "end": 637,
             "name": "a"
           },
           "init": {
             "type": "Literal",
-            "start": 637,
-            "end": 638,
+            "start": 640,
+            "end": 641,
             "value": 1,
             "raw": "1"
           }
@@ -722,23 +722,23 @@
     },
     {
       "type": "ExpressionStatement",
-      "start": 641,
-      "end": 648,
+      "start": 646,
+      "end": 653,
       "expression": {
         "type": "AssignmentExpression",
-        "start": 641,
-        "end": 647,
+        "start": 646,
+        "end": 652,
         "operator": "=",
         "left": {
           "type": "Identifier",
-          "start": 641,
-          "end": 642,
+          "start": 646,
+          "end": 647,
           "name": "a"
         },
         "right": {
           "type": "Literal",
-          "start": 645,
-          "end": 647,
+          "start": 650,
+          "end": 652,
           "value": 13,
           "raw": "13"
         }
@@ -746,26 +746,162 @@
     },
     {
       "type": "DebuggerStatement",
-      "start": 660,
-      "end": 669
+      "start": 665,
+      "end": 674
     },
     {
       "type": "BlockStatement",
-      "start": 681,
-      "end": 685,
+      "start": 686,
+      "end": 690,
       "body": []
     },
     {
-      "type": "BlockStatement",
-      "start": 687,
-      "end": 691,
-      "body": []
+      "type": "VariableDeclaration",
+      "start": 699,
+      "end": 713,
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 705,
+          "end": 712,
+          "id": {
+            "type": "Identifier",
+            "start": 705,
+            "end": 706,
+            "name": "b"
+          },
+          "init": {
+            "type": "Literal",
+            "start": 709,
+            "end": 712,
+            "value": 234,
+            "raw": "234"
+          }
+        }
+      ],
+      "kind": "const"
     },
     {
-      "type": "EmptyStatement",
-      "start": 691,
-      "end": 692
+      "type": "FunctionDeclaration",
+      "start": 717,
+      "end": 739,
+      "id": {
+        "type": "Identifier",
+        "start": 726,
+        "end": 730,
+        "name": "buzz"
+      },
+      "expression": false,
+      "generator": false,
+      "async": false,
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "start": 733,
+        "end": 739,
+        "body": []
+      }
+    },
+    {
+      "type": "ClassDeclaration",
+      "start": 741,
+      "end": 762,
+      "id": {
+        "type": "Identifier",
+        "start": 747,
+        "end": 755,
+        "name": "FooClass"
+      },
+      "superClass": null,
+      "body": {
+        "type": "ClassBody",
+        "start": 756,
+        "end": 762,
+        "body": []
+      }
+    },
+    {
+      "type": "ExportAllDeclaration",
+      "start": 764,
+      "end": 790,
+      "source": {
+        "type": "Literal",
+        "start": 778,
+        "end": 789,
+        "value": "../module",
+        "raw": "'../module'"
+      }
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 794,
+      "end": 812,
+      "declaration": {
+        "type": "Literal",
+        "start": 809,
+        "end": 811,
+        "value": 13,
+        "raw": "13"
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 817,
+      "end": 842,
+      "declaration": {
+        "type": "VariableDeclaration",
+        "start": 824,
+        "end": 842,
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 830,
+            "end": 841,
+            "id": {
+              "type": "Identifier",
+              "start": 830,
+              "end": 833,
+              "name": "bar"
+            },
+            "init": {
+              "type": "Literal",
+              "start": 836,
+              "end": 841,
+              "value": 13231,
+              "raw": "13231"
+            }
+          }
+        ],
+        "kind": "const"
+      },
+      "specifiers": [],
+      "source": null
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 847,
+      "end": 868,
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 854,
+          "end": 857,
+          "local": {
+            "type": "Identifier",
+            "start": 854,
+            "end": 857,
+            "name": "abc"
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "start": 863,
+        "end": 867,
+        "value": "sd",
+        "raw": "'sd'"
+      }
     }
   ],
-  "sourceType": "script"
+  "sourceType": "module"
 }
